@@ -25,6 +25,7 @@ Quilumbaquin Pillisa Alan David
 
 `
     git clone https://github.com/ALINFINITY/PRY_AUTENTICACION_MICROSERVICIO 
+    
     cd PRY_AUTENTICACION_MICROSERVICIO
 `
 ### 2. Instalar dependencias
@@ -35,6 +36,7 @@ Quilumbaquin Pillisa Alan David
 ### 3. Configurar el entorno
 `
     cp .env.example .env
+
     Editar el archivo .env con los parámetros correspondientes:
 `
 
