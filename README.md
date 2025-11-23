@@ -39,14 +39,15 @@ Quilumbaquin Pillisa Alan David
 
 Editar el archivo .env con los parámetros correspondientes:
 
-`
+<>
     DB_CONNECTION=mysql
     DB_HOST=Tu host
     DB_PORT=3306
     DB_DATABASE=db_auth_post
     DB_USERNAME=tu_usuario
     DB_PASSWORD=tu_contraseña
-`
+</>
+
 ### 4. Generar la clave de la aplicación
 `
     php artisan key:generate
