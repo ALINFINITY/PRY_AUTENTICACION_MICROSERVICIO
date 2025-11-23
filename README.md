@@ -7,62 +7,59 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Examen parcial práctico
+# Examen parcial práctico
 
-Microservicio de autenticacion.
+Microservicio de autenticación.
 
 ## Integrantes
-
 Quilumbaquin Pillisa Alan David
 
-# Instalación y Uso
+## Instalación y Uso
 
 ### Usuarios externos con permisos en el repositorio
-
-`vdcriollo@espe.edu.ec` 
+`vdcriollo@espe.edu.ec`
 
 ### 1. Clonar el repositorio
+```bash
+git clone https://github.com/ALINFINITY/PRY_AUTENTICACION_MICROSERVICIO
+cd PRY_AUTENTICACION_MICROSERVICIO
+```
 
-`
-    git clone https://github.com/ALINFINITY/PRY_AUTENTICACION_MICROSERVICIO 
-
-    cd PRY_AUTENTICACION_MICROSERVICIO
-`
 ### 2. Instalar dependencias
-`
-    composer install
-`
+```bash
+composer install
+```
 
 ### 3. Configurar el entorno
+```bash
+cp .env.example .env
+```
 
-`cp .env.example .env`
+Editar `.env` con:
 
-Editar el archivo .env con los parámetros correspondientes:
+```
+DB_CONNECTION=mysql
+DB_HOST=Tu host
+DB_PORT=3306
+DB_DATABASE=db_auth_post
+DB_USERNAME=tu_usuario
+DB_PASSWORD=tu_contraseña
+```
 
-<>
-    DB_CONNECTION=mysql
-    DB_HOST=Tu host
-    DB_PORT=3306
-    DB_DATABASE=db_auth_post
-    DB_USERNAME=tu_usuario
-    DB_PASSWORD=tu_contraseña
-</>
+### 4. Generar la clave
+```bash
+php artisan key:generate
+```
 
-### 4. Generar la clave de la aplicación
-`
-    php artisan key:generate
-`
-
-### 5. Ejecutar las migraciones
-`
-    php artisan migrate
-`
+### 5. Ejecutar migraciones
+```bash
+php artisan migrate
+```
 
 ### 6. Desplegar el servicio
-`
-    php artisan serve --host ip --port puerto
-`
+```bash
+php artisan serve --host ip --port puerto
+```
 
 ## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+MIT License.
