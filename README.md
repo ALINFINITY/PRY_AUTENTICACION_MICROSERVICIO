@@ -35,11 +35,11 @@ Quilumbaquin Pillisa Alan David
 
 ### 3. Configurar el entorno
 
-    `cp .env.example .env`
+`cp .env.example .env`
 
-    Editar el archivo .env con los parámetros correspondientes:
+Editar el archivo .env con los parámetros correspondientes:
 
-
+`
     DB_CONNECTION=mysql
     DB_HOST=Tu host
     DB_PORT=3306
