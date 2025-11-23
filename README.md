@@ -7,52 +7,58 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Examen parcial práctico
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Microservicio de autenticacion.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Integrantes
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Quilumbaquin Pillisa Alan David
 
-## Learning Laravel
+# Instalación y Uso
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### Usuarios externos con permisos en el repositorio
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+`vdcriollo@espe.edu.ec` 
 
-## Laravel Sponsors
+### 1. Clonar el repositorio
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+`
+    git clone https://github.com/ALINFINITY/PRY_AUTENTICACION_MICROSERVICIO 
+    cd PRY_AUTENTICACION_MICROSERVICIO
+`
+### 2. Instalar dependencias
+`
+    composer install
+`
 
-### Premium Partners
+### 3. Configurar el entorno
+`
+    cp .env.example .env
+    Editar el archivo .env con los parámetros correspondientes:
+`
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+    DB_CONNECTION=mysql
+    DB_HOST=Tu host
+    DB_PORT=3306
+    DB_DATABASE=db_auth_post
+    DB_USERNAME=tu_usuario
+    DB_PASSWORD=tu_contraseña
+`
+### 4. Generar la clave de la aplicación
+`
+    php artisan key:generate
+`
 
-## Contributing
+### 5. Ejecutar las migraciones
+`
+    php artisan migrate
+`
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 6. Desplegar el servicio
+`
+    php artisan serve --host ip --port puerto
+`
 
 ## License
 
